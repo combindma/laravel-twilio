@@ -2,6 +2,9 @@
 
 namespace Combindma\Twilio;
 
+use Twilio\Exceptions\ConfigurationException;
+use Twilio\Exceptions\TwilioException;
+use Twilio\Rest\Api\V2010\Account\MessageInstance;
 use Twilio\Rest\Client;
 
 class Twilio
@@ -56,8 +59,10 @@ class Twilio
      * Send sms using Twilio API
      *
      * @see https://www.twilio.com/docs/api/messaging/send-messages Documentation
+     *
+     * @throws ConfigurationException|TwilioException
      */
-    public function message(string $recipient, string $message)
+    public function message(string $recipient, string $message): ?MessageInstance
     {
         if (! $this->isEnabled()) {
             return null;
