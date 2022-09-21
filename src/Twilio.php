@@ -2,12 +2,9 @@
 
 namespace Combindma\Twilio;
 
-use Twilio\Exceptions\ConfigurationException;
-use Twilio\Exceptions\TwilioException;
-use Twilio\Rest\Api\V2010\Account\MessageInstance;
 use Twilio\Rest\Client;
 
-class Twilio implements TwilioContract
+class Twilio
 {
     protected ?string $sid;
 
@@ -27,7 +24,7 @@ class Twilio implements TwilioContract
 
     public function sid(): ?string
     {
-        return $this->sid();
+        return $this->sid;
     }
 
     public function from(): ?string
@@ -59,15 +56,12 @@ class Twilio implements TwilioContract
      * Send sms using Twilio API
      *
      * @see https://www.twilio.com/docs/api/messaging/send-messages Documentation
-     *
-     * @throws ConfigurationException|TwilioException
      */
-    public function message(string $recipient, string $message): ?MessageInstance
+    public function message(string $recipient, string $message)
     {
         if (! $this->isEnabled()) {
             return null;
         }
-
         $client = new Client($this->sid(), $this->token());
 
         return $client->messages->create($recipient, ['body' => $message, 'from' => $this->from()]);

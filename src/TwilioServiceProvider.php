@@ -17,7 +17,5 @@ class TwilioServiceProvider extends PackageServiceProvider
         $this->app->singleton(Twilio::class, function () {
             return new Twilio();
         });
-
-        $this->app->bind(TwilioContract::class, Twilio::class);
     }
 }
