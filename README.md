@@ -1,8 +1,8 @@
 # Laravel Twillio SMS API Integration
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/combindma/laravel-twilio.svg?style=flat-square)](https://packagist.org/packages/combindma/laravel-twilio)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/combindma/laravel-twilio/run-tests?label=tests)](https://github.com/combindma/laravel-twilio/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/combindma/laravel-twilio/Check%20&%20fix%20styling?label=code%20style)](https://github.com/combindma/laravel-twilio/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/combindma/laravel-twilio/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/combindma/laravel-twilio/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/combindma/laravel-twilio/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/combindma/laravel-twilio/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/combindma/laravel-twilio.svg?style=flat-square)](https://packagist.org/packages/combindma/laravel-twilio)
 
 Laravel Twillio SMS API IntegrationLaravel Twillio SMS API Integration
