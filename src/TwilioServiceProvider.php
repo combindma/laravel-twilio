@@ -15,7 +15,7 @@ class TwilioServiceProvider extends PackageServiceProvider
     public function packageRegistered()
     {
         $this->app->singleton(Twilio::class, function () {
-            return new Twilio();
+            return new Twilio;
         });
     }
 }

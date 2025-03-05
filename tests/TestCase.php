@@ -23,6 +23,6 @@ class TestCase extends Orchestra
         $app['config']->set('twilio.token', 'twilio_token');
         $app['config']->set('twilio.from', '0666666666');
         $app['config']->set('twilio.enabled', true);
-        $this->twilio = new Twilio();
+        $this->twilio = new Twilio;
     }
 }
