@@ -54,6 +54,16 @@ return [
     |
     */
     'from' => env('TWILIO_NUMBER', ''),
+    
+     /*
+    |--------------------------------------------------------------------------
+    | Whatsapp Number
+    |--------------------------------------------------------------------------
+    |
+    | The Phone number registered with Twilio that your Whatsapp Messages will come from
+    |
+    */
+    'whatsapp' => env('TWILIO_WHATSAPP', ''),
 
     /*
    |--------------------------------------------------------------------------
@@ -72,7 +82,21 @@ return [
 ```php
 use Combindma\Twilio\Facades\Twilio;
 
+//Simple SMS message
 Twilio::message($phone, $message);
+
+//Send a Message with a Messaging Service
+Twilio::messageWithService($phone, $message, $serviceId);
+
+//Send a message with WhatsApp
+Twilio::whatsapp($phone, $message);
+
+//Send a WhatsApp message using a message template & service
+$content = [
+ "1" => "Name",
+ "2" => "link",
+]
+Twilio::whatsappWithTemplate($phone, $serviceId, $templateId, array $content);
 ```
 
 ## Testing

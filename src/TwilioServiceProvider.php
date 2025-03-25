@@ -12,7 +12,7 @@ class TwilioServiceProvider extends PackageServiceProvider
         $package->name('laravel-twilio')->hasConfigFile();
     }
 
-    public function packageRegistered()
+    public function packageRegistered(): void
     {
         $this->app->singleton(Twilio::class, function () {
             return new Twilio;
