@@ -17,7 +17,7 @@ class TestCase extends Orchestra
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    public function getEnvironmentSetUp($app): void
     {
         $app['config']->set('twilio.sid', 'twilio_sid');
         $app['config']->set('twilio.token', 'twilio_token');
